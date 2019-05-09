@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+enum way {intreg=1,car,virgula,sir};
+void functie(void *c, enum way x){
+switch (x){
+case 1:printf("\n%d",*(int*)c);break;
+case 2:printf("\n%c",*(char*)c);break;
+case 3:printf("\n%.1f",*(float*)c);break;
+case 4:printf("\n%s",(char*)c);break;
+}}
+int main()
+{char b='S'; int i=5;
+float f=3.3; char s[5]="calin";
+functie(&i, intreg);
+functie(&b, car);
+functie(&f, virgula);
+functie(s, sir);
+    return 0;
+}
